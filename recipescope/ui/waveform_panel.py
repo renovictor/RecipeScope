@@ -17,7 +17,7 @@ class WaveformPanel(QWidget):
         layout.addWidget(self.toolbar)
         layout.addWidget(self.canvas)
 
-    def plot_waveform(self, dataframe: pd.DataFrame) -> None:
+    def plot_waveform(self, dataframe: pd.DataFrame, title: str = "Recipe Power Waveform") -> None:
         self.figure.clear()
         ax = self.figure.add_subplot(111)
         if dataframe.empty:
@@ -27,7 +27,7 @@ class WaveformPanel(QWidget):
         ax.plot(dataframe["time_s"], dataframe["power_w"], color="#1f77b4", linewidth=1.5)
         ax.set_xlabel("Time (s)")
         ax.set_ylabel("Power (W)")
-        ax.set_title("Recipe Power Waveform")
+        ax.set_title(title)
         ax.grid(True, alpha=0.3)
         self.figure.tight_layout()
         self.canvas.draw_idle()

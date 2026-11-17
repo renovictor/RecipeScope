@@ -3,8 +3,8 @@
 from __future__ import annotations
 
 APP_NAME = "RecipeScope"
-VERSION = "2026.11.0"
-VERSION_TUPLE = (2026, 11, 0)
+VERSION = "2026.11.1"
+VERSION_TUPLE = (2026, 11, 1)
 RELEASE_DATE = "2026-11-17"
 COMPANY_NAME = "ASM"
 DEPARTMENT_NAME = "RF Engineering"
