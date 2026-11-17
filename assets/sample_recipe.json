@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "recipe": {
+    "name": "Sample Semiconductor Process",
+    "description": "Main process repeated 20 times plus anneal loop.",
+    "steps": [
+      {
+        "enabled": true,
+        "step_name": "Depo",
+        "cycle_group": "Main Process",
+        "repeat_count": 20,
+        "duration": 50,
+        "time_unit": "ms",
+        "power": 15,
+        "power_unit": "W",
+        "mode": "Pulse",
+        "pulse_frequency": 1,
+        "frequency_unit": "kHz",
+        "duty_cycle_percent": 50,
+        "high_power": 15,
+        "low_power": 0
+      },
+      {
+        "enabled": true,
+        "step_name": "Idle",
+        "cycle_group": "Main Process",
+        "repeat_count": 1,
+        "duration": 150,
+        "time_unit": "ms",
+        "power": 0,
+        "power_unit": "W",
+        "mode": "Idle"
+      },
+      {
+        "enabled": true,
+        "step_name": "Treatment",
+        "cycle_group": "Main Process",
+        "repeat_count": 1,
+        "duration": 150,
+        "time_unit": "ms",
+        "power": 200,
+        "power_unit": "W",
+        "mode": "CW"
+      },
+      {
+        "enabled": true,
+        "step_name": "Idle",
+        "cycle_group": "Main Process",
+        "repeat_count": 1,
+        "duration": 650,
+        "time_unit": "ms",
+        "power": 0,
+        "power_unit": "W",
+        "mode": "Idle"
+      },
+      {
+        "enabled": true,
+        "step_name": "Interval",
+        "cycle_group": "",
+        "repeat_count": 1,
+        "duration": 2.0,
+        "time_unit": "s",
+        "power": 0,
+        "power_unit": "W",
+        "mode": "Idle"
+      },
+      {
+        "enabled": true,
+        "step_name": "Anneal",
+        "cycle_group": "Anneal Sequence",
+        "repeat_count": 92,
+        "duration": 100,
+        "time_unit": "ms",
+        "power": 120,
+        "power_unit": "W",
+        "mode": "CW"
+      }
+    ]
+  }
+}
